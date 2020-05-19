@@ -17,6 +17,7 @@ import { environment } from 'src/environments/environment';
 import { AdminComponent } from './admin/admin.component';
 import { ModalComponent } from './modal/modal.component';
 import { FormsModule } from '@angular/forms';
+import { ConfirmModalComponent } from './confirm-modal/confirm-modal.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +26,7 @@ import { FormsModule } from '@angular/forms';
     GalleryComponent,
     AdminComponent,
     ModalComponent,
+    ConfirmModalComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,7 +39,7 @@ import { FormsModule } from '@angular/forms';
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [ ModalComponent ]
+  entryComponents: [ ModalComponent,ConfirmModalComponent ]
 
 })
 export class AppModule { }

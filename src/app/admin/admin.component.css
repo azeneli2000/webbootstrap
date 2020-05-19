@@ -1,3 +1,15 @@
 .card-footer{
       margin-bottom:0;
     }
+    .image-upload > input
+{
+    display: none;
+}
+
+.align-left{
+  text-align: left !important;
+}
+
+.push-right{
+  float: right;
+}

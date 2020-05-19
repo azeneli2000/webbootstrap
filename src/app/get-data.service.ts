@@ -21,7 +21,9 @@ export class GetDataService {
   updateProject(titulliShqip,titulliAnglsht,detajeShqip,DetajeAnglisht,key){
     this.db.list('projekte').update(key,{
       titulli : titulliShqip,
-      detaje : detajeShqip
+      detaje : detajeShqip,
+      detajeanglisht:DetajeAnglisht,
+      titullianglisht:  titulliAnglsht
     })
   }
   addNewProjet(titulliShqip,detajeShqip,titulliAnglisht,detajeAnglisht){
@@ -30,7 +32,12 @@ export class GetDataService {
       titulli :titulliShqip,
       detaje :detajeShqip,
       titullianglisht :titulliAnglisht,
-      detajeanflisht : detajeAnglisht
-    })
+      detajeanglisht : detajeAnglisht
+    });
   }
+
+deleteProject(key){
+  this.db.list('projekte').remove(key);
+}
+
 }

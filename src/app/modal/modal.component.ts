@@ -32,7 +32,7 @@ export class ModalComponent implements OnInit {
   passBack() {
     this.passEntry.emit(this.modalData);
     if(!this.modalData.add)
-    this.data.updateProject(this.modalData.projektiShqipTitulli,'',this.modalData.projektiShqipDetaje,'',this.modalData.key);
+    this.data.updateProject(this.modalData.projektiShqipTitulli,this.modalData.projektiAnglishtTitulli,this.modalData.projektiShqipDetaje,this.modalData.projektiAnglishtDetaje,this.modalData.key);
 else
 this.data.addNewProjet(this.modalData.projektiShqipTitulli,this.modalData.projektiShqipDetaje,this.modalData.projektiAnglishtTitulli,this.modalData.projektiAnglishtDetaje)
     this.activeModal.close(this.modalData);

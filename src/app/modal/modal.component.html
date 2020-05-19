@@ -6,23 +6,37 @@
   </div>
   <div class="modal-body">
     <div class="container">
-        <div *ngIf="modalData.titulli">
-        <label for="titulliInput">Titulli</label>
-
-        <input type="text" class="form-control" id="titulliInput" [(ngModel)]="modalData.projektiShqipTitulli"  placeholder="Titulli" > <br />
-    </div>
+     
           
             <ngb-tabset [destroyOnHide]="false">
 
           <ngb-tab title="Shqip">
+            
             <ng-template ngbTabContent>
-             <textarea class="form-control" rows="25" style="min-width: 100%;" h-100 [(ngModel)]="modalData.projektiShqipDetaje" type="text">
+              <div *ngIf="modalData.titulli">
+                <label for="titulliInputShqip">Titulli shqip</label>
+        
+                <input type="text" class="form-control" id="titulliInputShqip" [(ngModel)]="modalData.projektiShqipTitulli"   > <br />
+            </div>
+            <div>
+            <label for="detajeInputShqip">Detaje shqip</label>  
+            <textarea id="detajeInputShqip"  class="form-control" rows="25" style="min-width: 100%;" h-100 [(ngModel)]="modalData.projektiShqipDetaje" type="text">
              </textarea>
+            </div>
             </ng-template>
           </ngb-tab>
+
           <ngb-tab title="Anglisht">
             <ng-template ngbTabContent>
-             <textarea class="form-control" rows="25" style="min-width: 100%;" [(ngModel)]="modalData.projektiAnglishtDetaje" type="text"> </textarea>
+              <div *ngIf="modalData.titulli">
+                <label for="titulliInputAnglisht">Titulli anglisht</label>
+        
+                <input type="text" class="form-control" id="titulliInputAnglisht" [(ngModel)]="modalData.projektiAnglishtTitulli"  > <br />
+            </div>
+            <div>
+              <label for="detajeInputAnglisht">Detaje anglisht</label>  
+             <textarea id="detajeInputAnglisht" class="form-control" rows="25" style="min-width: 100%;" [(ngModel)]="modalData.projektiAnglishtDetaje" type="text"> </textarea>
+            </div>
             </ng-template>
           </ngb-tab>            
            
