@@ -1,0 +1,31 @@
+<div class="container" style="margin-top: 5%;">
+  <button type="button" class="btn btn-info" (click)= "openModalNew(true)">Projekt i ri</button>
+
+  <div class="row">
+
+        <div class="card-deck col-sm-4" *ngFor="let p of projects; let i=index">
+            <div class="card text-white bg-secondary" style="margin-top: 5%;">
+                <img class="card-img-top" src= {{p.src}} height="300px">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">{{p.titulli}}</h5>
+                    <p class="card-text">{{p.detaje}}</p>                                                                                 
+                </div>
+                <footer >
+                  <input class="mt-auto" id={{p.key}}  type="file"
+                  #userPhoto
+                  (change)="onFileSelected($event)"
+                  name="image"
+                  autocomplete="off"
+                  
+                  />
+                  <button (click)="openModal(p.key,false,true)">Teksti</button>
+                </footer>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+

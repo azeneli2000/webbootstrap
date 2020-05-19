@@ -1,0 +1,205 @@
+<!-- navbar -->
+
+<div class="container-fluid">
+    <nav class="navbar fixed-top navbar-dark bg-dark navbar-expand-lg">
+        <div class="container-fluid px-0">
+            <div class="row w-100">
+                <div class="col-2">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false"
+                        aria-label="Toggle navigation" (click)="isShown = !isShown">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="col-10">
+                    <div class="collapse justify-content-end navbar-collapse" [ngClass]="{ 'show': isShown }"
+                        id="navbarTogglerDemo03">
+                        <ul class="navbar-nav mt-2 mt-lg-0">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#" (click)="isShown = false">Home</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#" (click)="isShown = false">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" (click)="isShown = false">Portfolio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" (click)="isShown = false">Book Me</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+<!-- carousel -->
+<ngb-carousel data-ride="carousel">
+    <ng-template ngbSlide>
+        <img src="assets/carusel1.jpg" alt="Delhi Metro" class="img-fluid imgCarousel">
+        <div class="carousel-caption">
+            <h1 style="color: whitesmoke">Delhi Metro</h1>
+        </div>
+    </ng-template>
+    <ng-template ngbSlide>
+        <img src="assets/carusel2.jpg" alt="Bangalore Metro" class="img-fluid imgCarousel">
+        <div class="carousel-caption">
+            <h1 style="color: whitesmoke">Bangalore Metro</h1>
+        </div>
+    </ng-template>
+    <ng-template ngbSlide>
+        <img src="assets/carusel3.jpg" alt="Channai Metro" class="img-fluid imgCarousel">
+        <div class="carousel-caption">
+            <h3 style="color: whitesmoke">Channai Metro</h3>
+        </div>
+    </ng-template>
+</ngb-carousel>
+
+
+<!-- kush jemi -->
+<div class="container" style="margin-top: 5%;">
+    <div class="row">
+        <div class="col-12">
+            <div class="card text-white bg-secondary">
+                <!-- <img class="card-img-top" src="assets/companyprofile.png" class="img-fluid"> -->
+                <div class="card-body">
+                    <h5 class="card-title">Kush jemi</h5>
+                    <p class="card-text">PrimaEnergy shpk eshte kompani qe ushtron veprimtari ekonomike ne ndertimin e
+                        infrastrtrukturave energjitke.Kompania u themelua në vitin 2016 pas nje analize te detajuar te
+                        kerkeses ne tregun e brendshem kyesisht duke lexuar qarte strategjite e zhvillimit
+                        infrastukuturor te ndermarrjeve publike si Ost dhe Oshee.Fale vizionit ne menagemant, kompania u
+                        konfiguarua qysh ne fillim me nje strukture dinamike, me staff te kualikuar per te perballuar me
+                        sukses sfidat ne inxhinjering, projektim, dhe implementim. Sa po te krijuar, ekipi yne, ne
+                        cilesine e nenkontraktorit u vu ne prove dhe realizoje ne kohe dhe me sukses nderrtimin e
+                        fiderit nr 339 20kv me nje distance prej 8km ne aksin me te veshtire gjate rr. se kavajes dhe
+                        riksotruksinin e 9 kabinave pertej ketij aksi. Pas rrugetmi I PrimaEnergy u konsolidua fale
+                        projekteve te reja qe kompania jone arriti te fitoje drejteperdrejte nga autoritet kontrakore si
+                        Oshee dhe Ost ne J.V. me partner lokal si linja ajrore me nivel tensioni 110kv/20kv dhe
+                        nenstacjone me nivel tensioni 110/20kv.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- certifikime -->
+<div class="container" style="margin-top: 5%;">
+    <div class="card-deck">
+        <div class="card text-white bg-secondary">
+            <img class="card-img-top" src="assets/enterprise.png" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Profili i kompanise</h5>
+                <p class="card-text">TProjektim, Implementim Punime Civle, Instalime, Komisionime, Testime, Ndertime,
+                    Rikonstruksione apo Ristrukturime dhe Mirembajtjeje per objektet e prodhimit, tranformimit,
+                    transmetimit, matjes dhe shperndarjes se energjise elektrike ne rrjetat e Tensionit te Larte, te
+                    mesem dhe te ulet</p>
+            </div>
+        </div>
+        <div class="card text-white bg-secondary">
+            <img class="card-img-top" src="assets/certification.png">
+            <div class="card-body">
+                <h5 class="card-title">Certifikimet</h5>
+                <p class="card-text">TCertifikate Nr aqs/q/23342017 EN-ISO 9001:2015
+                    Certifikate Nr.aqs/a/23352017 UNI-EN-ISO 14001:2015
+                    Certifikate Nr.aqs/s/23362017 BS OHSAS 18001:2007
+                    Certifikate Nr.aqs/pas/23372017 BS-PAS 99:2012</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+        </div>
+        <div class="card text-white bg-secondary">
+            <img class="card-img-top" src="assets/productlicensing.png" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Licensat</h5>
+                <p class="card-text">License Shoqeria : Nr.NZ.7470/2 date 10.01.2018 “Licence Profesionale per Shoqerite
+                    qe ushtrojne veprimtari ndertuese” License per tregetimin te enrgjise elektrike Nr.393 Vendim Bordi
+                    ERE nr 195 dt24.11.2017 Licensa e shoqerise Prima Energy mbulon punimet ne fushat e inxhinierise me
+                    drejtues teknik te specializuar ne ndertim, elektrike dhe gjedet.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- partneret -->
+<div class="container" style="margin-top: 5%;">
+    <div class="row">
+        <div class="col-12">
+            <div class="card text-white bg-secondary">
+                <!-- <img class="card-img-top" src="assets/companyprofile.png" class="img-fluid"> -->
+                <div class="card-body">
+                    <h5 class="card-title">Partneret e huaj</h5>
+                    <p class="card-text">Eshte dashur shume kohe ,mund dhe investim nga ana jone qe te perfundojme te
+                        bashkepunojme me firmat me prestigjoze ne vendet e zhvilluara si Grig Solution,ABB,Mitas
+                        Industry,SARA,ZTT etj. Per nga lloji i sherbimit dhe nga disponueshmeria e ketyre firmave
+                        kompania jone ka arritur ne nivelet me te larta te komunikimit dhe perzgjedhjes se materialeve
+                        me mira, me cilesore dhe ekonomike. Bashkepunimi me keta firma i ka sjelle nje rritje te
+                        vazhdueshme kompanise tone.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-gallery></app-gallery>
+<!-- projekte -->
+<div class="container" style="margin-top: 5%;">
+    <div class="row">
+
+        <div class="card-deck col-sm-4" *ngFor="let p of projects; let i=index">
+            <div class="card text-white bg-secondary" style="margin-top: 5%;">
+                <img class="card-img-top" src= {{p.src}} alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{p.titulli}}</h5>
+                    <p class="card-text">{{p.detaje}}</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!--footer -->
+<footer class="site-footer" style = "margin-top: 5%;">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <h6>About</h6>
+          <p class="text-justify">Scanfcode.com <i>CODE WANTS TO BE SIMPLE </i> is an initiative  to help the upcoming programmers with the code. </p>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <h6>Categories</h6>
+          <ul class="footer-links">
+            <li><a href="http://scanfcode.com/category/c-language/">C</a></li>
+
+            
+          </ul>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <h6>Quick Links</h6>
+          <ul class="footer-links">
+            <li><a href="http://scanfcode.com/about/">About Us</a></li>
+    
+            
+          </ul>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div class="container" >
+      <div class="row">
+        <div class="col-md-8 col-sm-6 col-xs-12">
+          <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by 
+       <a href="#">Scanfcode</a>.
+          </p>
+        </div>
+
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <ul class="social-icons">
+            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+            <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+          </ul>
+        </div>
+      </div>
+    </div>
+</footer>
