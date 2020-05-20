@@ -18,6 +18,8 @@ import { AdminComponent } from './admin/admin.component';
 import { ModalComponent } from './modal/modal.component';
 import { FormsModule } from '@angular/forms';
 import { ConfirmModalComponent } from './confirm-modal/confirm-modal.component';
+import { SettingsModalComponent } from './settings-modal/settings-modal.component';
+import { GaleryAdmimComponent } from './galery-admim/galery-admim.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,6 +29,8 @@ import { ConfirmModalComponent } from './confirm-modal/confirm-modal.component';
     AdminComponent,
     ModalComponent,
     ConfirmModalComponent,
+    SettingsModalComponent,
+    GaleryAdmimComponent,
   ],
   imports: [
     BrowserModule,

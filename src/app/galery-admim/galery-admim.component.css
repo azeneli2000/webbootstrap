@@ -1,0 +1,9 @@
+.image-upload > input
+{
+    display: none;
+}
+.imgCarousel {
+    height: 200px;
+    width: 100%;
+    object-fit: cover; 
+}

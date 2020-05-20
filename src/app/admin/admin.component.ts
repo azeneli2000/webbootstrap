@@ -7,6 +7,7 @@ import { GetDataService } from '../get-data.service';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 import { ModalComponent } from '../modal/modal.component';
 import { ConfirmModalComponent } from '../confirm-modal/confirm-modal.component';
+import { SettingsModalComponent } from '../settings-modal/settings-modal.component';
 
 @Component({
   selector: 'app-admin',
@@ -32,6 +33,25 @@ export class AdminComponent implements OnInit {
     projektiAnglishtDetaje: '',
     imageUrl: '',
   };
+
+
+  //SETTINGS
+   modelSetting  = []//= [{
+//     key : '',
+//     teksti:'',
+//     tekstiAnglisht : ''
+// }]
+  about  :{ } ;
+  aboutAnglisht
+  certifikime ;
+  certifikimeAnglisht
+  licensat ;
+  licensatAnglisht
+  partneret ;
+  partneretAnglisht
+  profili ;
+  profiliAnglisht;
+
   constructor(
     private data: GetDataService,
     private storage: AngularFireStorage,
@@ -51,6 +71,24 @@ export class AdminComponent implements OnInit {
         });
       });
     });
+    this.data.getSettings().subscribe((s)=>{
+
+   this.about = s.find((s)=>s.key=="about").payload.val()['teksti'];
+   this.aboutAnglisht = s.find((s)=>s.key=="about").payload.val()['tekstiAnglisht'];
+
+   this.certifikime = s.find((s)=>s.key=="certifikime").payload.val()['teksti'];
+   this.certifikimeAnglisht = s.find((s)=>s.key=="certifikime").payload.val()['tekstiAnglisht'];
+
+   this.licensat = s.find((s)=>s.key=="licensat").payload.val()['teksti'];
+   this.licensatAnglisht = s.find((s)=>s.key=="licensat").payload.val()['tekstiAnglisht'];
+
+   this.profili = s.find((s)=>s.key=="profili").payload.val()['teksti'];
+   this.profiliAnglisht = s.find((s)=>s.key=="profili").payload.val()['tekstiAnglisht'];
+  
+   this.partneret = s.find((s)=>s.key=="partneret").payload.val()['teksti'];
+   this.partneretAnglisht = s.find((s)=>s.key=="partneret").payload.val()['tekstiAnglisht'];
+
+    })
   }
 
   onFileSelected(event) {
@@ -124,6 +162,21 @@ export class AdminComponent implements OnInit {
     });
   }
 
+  openModalSettings(setting,teksti,tekstiAnglisht) {
+    const modalRef = this.modalService.open(SettingsModalComponent);
+   console.log(setting)
+    modalRef.componentInstance.modalData = {
+      key:setting,
+    teksti:teksti,
+    tekstiAnglisht :tekstiAnglisht
+  }
+
+    modalRef.result.then((result) => {
+      if (result) {
+        console.log(result);
+      }
+    });
+  }
   deleteProject(key) {
     this.data.deleteProject(key);
   }

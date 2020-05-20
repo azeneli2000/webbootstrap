@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Lightbox } from 'ngx-lightbox';
+import { GetDataService } from '../get-data.service';
 
 
 @Component({
@@ -9,7 +10,7 @@ import { Lightbox } from 'ngx-lightbox';
 })
 export class GalleryComponent implements OnInit {
 
-  constructor(private _lightbox: Lightbox) { 
+  constructor(private _lightbox: Lightbox,private data:GetDataService) { 
     this.album.push({'src':'assets/carusel1.jpg','caption':'','thumb':'assets/carusel1.jpg'});
     this.album.push({'src':'assets/carusel2.jpg','caption':'','thumb':'assets/carusel2.jpg'});
 
@@ -32,6 +33,21 @@ export class GalleryComponent implements OnInit {
     this._lightbox.close();
   }
   ngOnInit(): void {
+    let l =this.data.checkGalery().subscribe((a)=>{
+     console.log(a)
+      if(a.length==0)
+       this.data.addGAlleryEmpty();
+       else 
+       {
+         a.forEach(element => {
+         element.payload.val()
+          this.album.push(element.payload.val())
+          
+         });
+       }
+       console.log(this.album)
+    });
   }
+
 
 }
