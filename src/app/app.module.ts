@@ -20,6 +20,7 @@ import { FormsModule } from '@angular/forms';
 import { ConfirmModalComponent } from './confirm-modal/confirm-modal.component';
 import { SettingsModalComponent } from './settings-modal/settings-modal.component';
 import { GaleryAdmimComponent } from './galery-admim/galery-admim.component';
+import { LoginComponent } from './login/login.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +32,7 @@ import { GaleryAdmimComponent } from './galery-admim/galery-admim.component';
     ConfirmModalComponent,
     SettingsModalComponent,
     GaleryAdmimComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

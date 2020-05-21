@@ -13,3 +13,8 @@
 .push-right{
   float: right;
 }
+.imgCarousel1 {
+  height: 200px;
+  width: 100%;
+  object-fit: cover; 
+} 

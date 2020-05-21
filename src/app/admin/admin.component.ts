@@ -8,6 +8,8 @@ import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 import { ModalComponent } from '../modal/modal.component';
 import { ConfirmModalComponent } from '../confirm-modal/confirm-modal.component';
 import { SettingsModalComponent } from '../settings-modal/settings-modal.component';
+import { AuthService } from '../auth/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admin',
@@ -15,6 +17,8 @@ import { SettingsModalComponent } from '../settings-modal/settings-modal.compone
   styleUrls: ['./admin.component.css'],
 })
 export class AdminComponent implements OnInit {
+  email ;
+  isShown;
   uploadProgress: number = 0;
   currentProjectId: string = '';
   projects: any = [];
@@ -55,14 +59,21 @@ export class AdminComponent implements OnInit {
   constructor(
     private data: GetDataService,
     private storage: AngularFireStorage,
-    private modalService: NgbModal
+    private modalService: NgbModal,
+    private router : Router,
+    private auth : AuthService
   ) {}
+ 
 
   ngOnInit(): void {
+    if(!this.auth.isLoggedIn)
+     this.router.navigate(['/login']);
+      
+     this.email= localStorage.getItem('user');
+
     this.data.getDataShqip().subscribe((s) => {
       this.projects = [];
       s.forEach((element) => {
-        console.log(element.payload.val());
         this.projects.push({
           key: element.key,
           src: element.payload.val()['imageUrl'],
@@ -106,7 +117,6 @@ export class AdminComponent implements OnInit {
           this.downloadURL.subscribe((url) => {
             if (url) {
               this.fb = url;
-              console.log(url);
               this.data.updateProjectImage(event.target.id, url);
             }
           });
@@ -133,7 +143,6 @@ export class AdminComponent implements OnInit {
     ).detaje;
     modalRef.result.then((result) => {
       if (result) {
-        console.log(result);
       }
     });
   }
@@ -146,7 +155,6 @@ export class AdminComponent implements OnInit {
 
     modalRef.result.then((result) => {
       if (result) {
-        console.log(result);
       }
     });
   }
@@ -157,14 +165,12 @@ export class AdminComponent implements OnInit {
 
     modalRef.result.then((result) => {
       if (result) {
-        console.log(result);
       }
     });
   }
 
   openModalSettings(setting,teksti,tekstiAnglisht) {
     const modalRef = this.modalService.open(SettingsModalComponent);
-   console.log(setting)
     modalRef.componentInstance.modalData = {
       key:setting,
     teksti:teksti,
@@ -173,9 +179,18 @@ export class AdminComponent implements OnInit {
 
     modalRef.result.then((result) => {
       if (result) {
-        console.log(result);
       }
     });
+  }
+
+
+  scrollTo(section) {
+    document.querySelector('#' + section)
+    .scrollIntoView();
+    this.isShown=false;
+  }
+  logout(){
+    this.auth.logout()
   }
   deleteProject(key) {
     this.data.deleteProject(key);

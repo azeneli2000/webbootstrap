@@ -69,11 +69,11 @@ this.db.list('projekte/galeri').update(key,{
 });
 }
 
-addGallery(url){
+addGallery(){
   this.db.list('projekte/galeri').push({
     caption : "",
-    src : url,
-    thumb : url
+    src : 'https://firebasestorage.googleapis.com/v0/b/primaenrgy-7887e.appspot.com/o/RoomsImages%2F1589882706015?alt=media&token=8f02f2ae-f962-4a9b-8bc5-3933109ee02f',
+    thumb : 'https://firebasestorage.googleapis.com/v0/b/primaenrgy-7887e.appspot.com/o/RoomsImages%2F1589882706015?alt=media&token=8f02f2ae-f962-4a9b-8bc5-3933109ee02f'
   });
 }
 deleteGallery(key){

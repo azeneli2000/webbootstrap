@@ -23,9 +23,7 @@ export class ModalComponent implements OnInit {
   constructor( public activeModal: NgbActiveModal, private data : GetDataService) { }
 
   ngOnInit(): void {
-    // console.log(this.modalData)
-    console.log(this.modalData.titulli);
-    console.log(this.modalData.add);
+  
 
   }
 

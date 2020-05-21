@@ -2,6 +2,10 @@
 
 <div class="container-fluid">
     <nav class="navbar fixed-top navbar-dark bg-dark navbar-expand-lg">
+        <a class="navbar-brand d-none d-lg-block" href="#" >
+            <img src="/assets/logo3.png" width="50" height="30" class="d-inline-block align-top" alt=""  >
+            Prima Energy
+          </a>
         <div class="container-fluid px-0">
             <div class="row w-100">
                 <div class="col-2">
@@ -15,20 +19,34 @@
                     <div class="collapse justify-content-end navbar-collapse" [ngClass]="{ 'show': isShown }"
                         id="navbarTogglerDemo03">
                         <ul class="navbar-nav mt-2 mt-lg-0">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#" (click)="isShown = false">Home</a>
+
+                            <li class="nav-item ">
+                                <a class="nav-link"  (click)="scrollTo('section1')" style="cursor:pointer;">Kryesore</a>
                             </li>
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#" (click)="isShown = false">About</a>
+                            <li class="nav-item ">
+                                <a class="nav-link"  (click)="scrollTo('section2')" style="cursor:pointer;">Certifikime</a>
+                            </li>
+                            <li class="nav-item" > 
+                                <a class="nav-link" (click)="scrollTo('section5')" style="cursor:pointer;">Projekte</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#" (click)="isShown = false">Portfolio</a>
+                                <a class="nav-link" (click)="scrollTo('section3')" style="cursor:pointer;">Partneret</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#" (click)="isShown = false">Book Me</a>
+                                <a class="nav-link" (click)="scrollTo('section4')" style="cursor:pointer;">Galeri</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" (click)="scrollTo('section6')" style="cursor:pointer;">Kontakt</a>
+                            </li>
+
                         </ul>
+                       <a routerLink="/en">
+                        <img src="/assets/english.png" width="30" height="30" class="d-inline-block align-center" alt="" >
+                       </a>
+
                     </div>
+                   
+
                 </div>
             </div>
         </div>
@@ -39,114 +57,98 @@
     <ng-template ngbSlide>
         <img src="assets/carusel1.jpg" alt="Delhi Metro" class="img-fluid imgCarousel">
         <div class="carousel-caption">
-            <h1 style="color: whitesmoke">Delhi Metro</h1>
+            <h1 style="color: whitesmoke">Inovacion</h1>
+            <h3 style="color: whitesmoke">Krijojme konfortin maksimal klientit duke i ofruar produkt innovativ, efficient me standartin me te larte duke nisur nga projekti deri tek akti kolaudimit.</h3>
         </div>
     </ng-template>
     <ng-template ngbSlide>
         <img src="assets/carusel2.jpg" alt="Bangalore Metro" class="img-fluid imgCarousel">
         <div class="carousel-caption">
-            <h1 style="color: whitesmoke">Bangalore Metro</h1>
+            <h1 style="color: whitesmoke">Staf i kualifikuar</h1>
+            <h3 style="color: whitesmoke">Perfshijme ne stafin tone njerez me eksperience dhe te talentuar duke gjeneruar klime  motivuese ne veprimtarine tone si ekip.</h3>
         </div>
     </ng-template>
     <ng-template ngbSlide>
         <img src="assets/carusel3.jpg" alt="Channai Metro" class="img-fluid imgCarousel">
         <div class="carousel-caption">
-            <h3 style="color: whitesmoke">Channai Metro</h3>
+            <h1 style="color: whitesmoke">Cilesi</h1>
+            <h3 style="color: whitesmoke">Fokusohemi ne realizimin e objektivit tone  duke perzgjedhur  gjithnje  prodhues  te klasit pare  per sa i perket materialeve  per te  garantuar cilesi dhe  jetgjatesi  sa me te larte.</h3>
         </div>
     </ng-template>
 </ngb-carousel>
 
 
 <!-- kush jemi -->
-<div class="container" style="margin-top: 5%;">
+<div  id="section1"></div>
+<div class="container " style="margin-top: 5%;">
     <div class="row">
-        <div class="col-12">
-            <div class="card text-white bg-secondary">
+        <div class="col-12 " >
+            <div class="card text-white bg-secondary ">
                 <!-- <img class="card-img-top" src="assets/companyprofile.png" class="img-fluid"> -->
-                <div class="card-body">
+                <div class="card-body shadow-nohover">
                     <h5 class="card-title">Kush jemi</h5>
-                    <p class="card-text">PrimaEnergy shpk eshte kompani qe ushtron veprimtari ekonomike ne ndertimin e
-                        infrastrtrukturave energjitke.Kompania u themelua në vitin 2016 pas nje analize te detajuar te
-                        kerkeses ne tregun e brendshem kyesisht duke lexuar qarte strategjite e zhvillimit
-                        infrastukuturor te ndermarrjeve publike si Ost dhe Oshee.Fale vizionit ne menagemant, kompania u
-                        konfiguarua qysh ne fillim me nje strukture dinamike, me staff te kualikuar per te perballuar me
-                        sukses sfidat ne inxhinjering, projektim, dhe implementim. Sa po te krijuar, ekipi yne, ne
-                        cilesine e nenkontraktorit u vu ne prove dhe realizoje ne kohe dhe me sukses nderrtimin e
-                        fiderit nr 339 20kv me nje distance prej 8km ne aksin me te veshtire gjate rr. se kavajes dhe
-                        riksotruksinin e 9 kabinave pertej ketij aksi. Pas rrugetmi I PrimaEnergy u konsolidua fale
-                        projekteve te reja qe kompania jone arriti te fitoje drejteperdrejte nga autoritet kontrakore si
-                        Oshee dhe Ost ne J.V. me partner lokal si linja ajrore me nivel tensioni 110kv/20kv dhe
-                        nenstacjone me nivel tensioni 110/20kv.</p>
+                    <p class="card-text">{{about}}</p>
                 </div>
             </div>
         </div>
     </div>
 </div>
 <!-- certifikime -->
+<div  id="section2"></div>
 <div class="container" style="margin-top: 5%;">
     <div class="card-deck">
         <div class="card text-white bg-secondary">
             <img class="card-img-top" src="assets/enterprise.png" alt="Card image cap">
-            <div class="card-body">
+            <div class="card-body shadow-nohover ">
                 <h5 class="card-title">Profili i kompanise</h5>
-                <p class="card-text">TProjektim, Implementim Punime Civle, Instalime, Komisionime, Testime, Ndertime,
-                    Rikonstruksione apo Ristrukturime dhe Mirembajtjeje per objektet e prodhimit, tranformimit,
-                    transmetimit, matjes dhe shperndarjes se energjise elektrike ne rrjetat e Tensionit te Larte, te
-                    mesem dhe te ulet</p>
+                <p class="card-text">{{profili}}</p>
             </div>
         </div>
         <div class="card text-white bg-secondary">
             <img class="card-img-top" src="assets/certification.png">
-            <div class="card-body">
+            <div class="card-body shadow-nohover">
                 <h5 class="card-title">Certifikimet</h5>
-                <p class="card-text">TCertifikate Nr aqs/q/23342017 EN-ISO 9001:2015
-                    Certifikate Nr.aqs/a/23352017 UNI-EN-ISO 14001:2015
-                    Certifikate Nr.aqs/s/23362017 BS OHSAS 18001:2007
-                    Certifikate Nr.aqs/pas/23372017 BS-PAS 99:2012</p>
+                <p class="card-text">{{certifikime}}</p>
                 <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
             </div>
         </div>
         <div class="card text-white bg-secondary">
             <img class="card-img-top" src="assets/productlicensing.png" alt="Card image cap">
-            <div class="card-body">
+            <div class="card-body shadow-nohover">
                 <h5 class="card-title">Licensat</h5>
-                <p class="card-text">License Shoqeria : Nr.NZ.7470/2 date 10.01.2018 “Licence Profesionale per Shoqerite
-                    qe ushtrojne veprimtari ndertuese” License per tregetimin te enrgjise elektrike Nr.393 Vendim Bordi
-                    ERE nr 195 dt24.11.2017 Licensa e shoqerise Prima Energy mbulon punimet ne fushat e inxhinierise me
-                    drejtues teknik te specializuar ne ndertim, elektrike dhe gjedet.</p>
+                <p class="card-text">{{licensat}}</p>
                 <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
             </div>
         </div>
     </div>
 </div>
 <!-- partneret -->
-<div class="container" style="margin-top: 5%;">
+<div  id="section3"></div>
+<div class="container" style="margin-top: 5%;" >
     <div class="row">
         <div class="col-12">
             <div class="card text-white bg-secondary">
                 <!-- <img class="card-img-top" src="assets/companyprofile.png" class="img-fluid"> -->
-                <div class="card-body">
+                <div class="card-body shadow-nohover">
                     <h5 class="card-title">Partneret e huaj</h5>
-                    <p class="card-text">Eshte dashur shume kohe ,mund dhe investim nga ana jone qe te perfundojme te
-                        bashkepunojme me firmat me prestigjoze ne vendet e zhvilluara si Grig Solution,ABB,Mitas
-                        Industry,SARA,ZTT etj. Per nga lloji i sherbimit dhe nga disponueshmeria e ketyre firmave
-                        kompania jone ka arritur ne nivelet me te larta te komunikimit dhe perzgjedhjes se materialeve
-                        me mira, me cilesore dhe ekonomike. Bashkepunimi me keta firma i ka sjelle nje rritje te
-                        vazhdueshme kompanise tone.</p>
+                    <p class="card-text">{{partneret}}</p>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<div class="conatiner" id="section4" >
 <app-gallery></app-gallery>
+</div>
+<div  id="section5"></div>
 <!-- projekte -->
-<div class="container" style="margin-top: 5%;">
+<div class="container" style="margin-top: 5%;" >
     <div class="row">
 
         <div class="card-deck col-sm-4" *ngFor="let p of projects; let i=index">
             <div class="card text-white bg-secondary" style="margin-top: 5%;">
-                <img class="card-img-top" src= {{p.src}} alt="Card image cap">
-                <div class="card-body">
+                <img class="card-img-top img-thumbnail imgCarousel1 img-fluid" src= {{p.src}} alt="Card image cap">
+                <div class="card-body shadow-nohover">
                     <h5 class="card-title">{{p.titulli}}</h5>
                     <p class="card-text">{{p.detaje}}</p>
                 </div>
@@ -155,28 +157,28 @@
 
     </div>
 </div>
+<div  id="section6"></div>
 <!--footer -->
 <footer class="site-footer" style = "margin-top: 5%;">
     <div class="container">
       <div class="row">
-        <div class="col-sm-12 col-md-6">
-          <h6>About</h6>
-          <p class="text-justify">Scanfcode.com <i>CODE WANTS TO BE SIMPLE </i> is an initiative  to help the upcoming programmers with the code. </p>
+        <div class="col-sm-12 col-md-6">            
+          <h6><i class="fa fa-map-marker"></i> Adresa </h6>
+          <p class="text-justify">Bulevardi Gjergj Fishta, Alpas Center hyrja 2, kat7 nr 18 <br />
+              Tirane Albania  zip code 1001.</p>
         </div>
 
         <div class="col-xs-6 col-md-3">
-          <h6>Categories</h6>
+          <h6><i class="fa fa-envelope"></i> Kontakt</h6>
           <ul class="footer-links">
-            <li><a href="http://scanfcode.com/category/c-language/">C</a></li>
-
-            
+            <li>Administratori : <a href= "mailto:email@fation.hasani@primaenergy-al.com"> fation.hasani@primaenergy-al.com </a><br />
+             <li>Informacione : <br /><a href= "mailto:email@fation.hasani@primaenergy-al.com"> info@primaenergy-al.com </a>                         
           </ul>
         </div>
-
         <div class="col-xs-6 col-md-3">
-          <h6>Quick Links</h6>
+          <h6><i class="fa fa-phone"></i>Telefon</h6>
           <ul class="footer-links">
-            <li><a href="http://scanfcode.com/about/">About Us</a></li>
+            <li>Administrator :<a href="tel:00355692069800"> 00355692069800  </a></li>
     
             
           </ul>
@@ -187,16 +189,16 @@
     <div class="container" >
       <div class="row">
         <div class="col-md-8 col-sm-6 col-xs-12">
-          <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by 
-       <a href="#">Scanfcode</a>.
+          <p class="copyright-text">Copyright &copy; Te gjitha te drejtat rezervuar Prima Energy 
+      
           </p>
         </div>
 
         <div class="col-md-4 col-sm-6 col-xs-12">
           <ul class="social-icons">
-            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a class="facebook" href="https://www.facebook.com/PrimaEnergyAl/"><i class="fa fa-facebook"></i></a></li>
             <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-            <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+            <!-- <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li> -->
             <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
           </ul>
         </div>

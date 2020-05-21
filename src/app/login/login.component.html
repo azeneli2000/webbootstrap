@@ -1,0 +1,23 @@
+<div class="container pt-3">
+    <div class="row justify-content-sm-center">
+      <div class="col-sm-10 col-md-6">
+        <div class="card border-info">
+          <div class="card-header">Hyrje ne panelin Admin</div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-4 text-center">
+                <img src="./assets/login.png" class="img-fluid">
+              </div>
+              <div class="col-md-8">
+                <form>
+                  <input name= "email" type="text" class="form-control mb-2" placeholder="Email" required autofocus [(ngModel)]="email">
+                  <input name= "password" type="password" class="form-control mb-2" placeholder="Fjalekalimi" required [(ngModel)]="password">
+                  <button class="btn btn-lg btn-primary btn-block mb-1" type="submit" [disabled]="!email || !password" (click)="login()">Hyrje</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

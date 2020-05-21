@@ -1,1 +1,209 @@
-<p>homeshqip works!</p>
+<!-- navbar -->
+
+<div class="container-fluid">
+    <nav class="navbar fixed-top navbar-dark bg-dark navbar-expand-lg">
+        <a class="navbar-brand  d-none d-lg-block"  href="#">
+            <img src="/assets/logo3.png" width="50" height="30" class="d-inline-block align-top" alt="">
+            Prima Energy
+          </a>
+        <div class="container-fluid px-0">
+            <div class="row w-100">
+                <div class="col-2">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false"
+                        aria-label="Toggle navigation" (click)="isShown = !isShown">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="col-10">
+                    <div class="collapse justify-content-end navbar-collapse" [ngClass]="{ 'show': isShown }"
+                        id="navbarTogglerDemo03">
+                        <ul class="navbar-nav mt-2 mt-lg-0">
+                            <li class="nav-item ">
+                                <a class="nav-link"  (click)="scrollTo('section1')" style="cursor:pointer;">Home</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link"  (click)="scrollTo('section2')" style="cursor:pointer;">Certifications</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" (click)="scrollTo('section5')" style="cursor:pointer;">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" (click)="scrollTo('section3')" style="cursor:pointer;">Partners</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" (click)="scrollTo('section4')" style="cursor:pointer;">Gallery</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" (click)="scrollTo('section6')" style="cursor:pointer;">Contact</a>
+                            </li>
+                        </ul>
+                        <a routerLink="/">
+                            <img src="/assets/shqip.png" width="30" height="30" class="d-inline-block align-center" alt=""  >
+                           </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+<!-- carousel -->
+<ngb-carousel data-ride="carousel">
+    <ng-template ngbSlide>
+        <img src="assets/carusel1.jpg" alt="Delhi Metro" class="img-fluid imgCarousel">
+        <div class="carousel-caption">
+            <h1 style="color: whitesmoke">Innovation</h1>
+            <h3 style="color: whitesmoke">
+                We create maximum comfort for the client by offering an innovative, efficient product with the highest standard, starting from the project to the testing.</h3>
+
+        </div>
+    </ng-template>
+    <ng-template ngbSlide>
+        <img src="assets/carusel2.jpg" alt="Bangalore Metro" class="img-fluid imgCarousel">
+        <div class="carousel-caption">
+            <h1 style="color: whitesmoke">Qualified staff</h1>
+            <h3 style="color: whitesmoke">We include in our staff people with experience and talent by generating motivational climate in our activity as a team.</h3>
+        </div>
+    </ng-template>
+    <ng-template ngbSlide>
+        <img src="assets/carusel3.jpg" alt="Channai Metro" class="img-fluid imgCarousel">
+        <div class="carousel-caption">
+            <h1 style="color: whitesmoke">Quality</h1>
+            <h3 style="color: whitesmoke">
+                We focus on achieving our goal by always selecting first class manufacturers in terms of materials to guarantee the highest quality and durability.</h3>
+
+        </div>
+    </ng-template>
+</ngb-carousel>
+
+
+<!-- kush jemi -->
+<div  id="section1"></div>
+<div class="container " style="margin-top: 5%;">
+    <div class="row">
+        <div class="col-12 " >
+            <div class="card text-white bg-secondary ">
+                <!-- <img class="card-img-top" src="assets/companyprofile.png" class="img-fluid"> -->
+                <div class="card-body shadow-nohover">
+                    <h5 class="card-title">About us</h5>
+                    <p class="card-text">{{aboutAnglisht}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- certifikime -->
+<div  id="section2"></div>
+<div class="container" style="margin-top: 5%;">
+    <div class="card-deck">
+        <div class="card text-white bg-secondary">
+            <img class="card-img-top" src="assets/enterprise.png" alt="Card image cap">
+            <div class="card-body shadow-nohover ">
+                <h5 class="card-title">Company profile</h5>
+                <p class="card-text">{{profiliAnglisht}}</p>
+            </div>
+        </div>
+        <div class="card text-white bg-secondary">
+            <img class="card-img-top" src="assets/certification.png">
+            <div class="card-body shadow-nohover">
+                <h5 class="card-title">Certifications</h5>
+                <p class="card-text">{{certifikimeAnglisht}}</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+        </div>
+        <div class="card text-white bg-secondary">
+            <img class="card-img-top" src="assets/productlicensing.png" alt="Card image cap">
+            <div class="card-body shadow-nohover">
+                <h5 class="card-title">Licenses</h5>
+                <p class="card-text">{{licensatAnglisht}}</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- partneret -->
+<div  id="section3"></div>
+<div class="container" style="margin-top: 5%;" >
+    <div class="row">
+        <div class="col-12">
+            <div class="card text-white bg-secondary">
+                <!-- <img class="card-img-top" src="assets/companyprofile.png" class="img-fluid"> -->
+                <div class="card-body shadow-nohover">
+                    <h5 class="card-title">Our partners</h5>
+                    <p class="card-text">{{partneretAnglisht}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="conatiner" id="section4" >
+<app-gallery></app-gallery>
+</div>
+<div  id="section5"></div>
+<!-- projekte -->
+<div class="container" style="margin-top: 5%;" >
+    <div class="row">
+
+        <div class="card-deck col-sm-4" *ngFor="let p of projects; let i=index">
+            <div class="card text-white bg-secondary" style="margin-top: 5%;">
+                <img class="card-img-top img-thumbnail imgCarousel1 img-fluid" src= {{p.src}} alt="Card image cap">
+                <div class="card-body shadow-nohover">
+                    <h5 class="card-title">{{p.titulli}}</h5>
+                    <p class="card-text">{{p.detaje}}</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div  id="section6"></div>
+<!--footer -->
+<footer class="site-footer" style = "margin-top: 5%;">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <h6><i class="fa fa-map-marker"></i>Address</h6>
+          <p class="text-justify">Bulevardi Gjergj Fishta, Alpas Center hyrja 2, kat7 nr 18 <br />
+              Tirane Albania  zip code 1001.</p>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <h6><i class="fa fa-envelope"></i>Contact</h6>
+          <ul class="footer-links">
+            <li>Administrator : <a href= "mailto:email@fation.hasani@primaenergy-al.com"> fation.hasani@primaenergy-al.com </a><br />
+                <li>Information : <br /><a href= "mailto:email@fation.hasani@primaenergy-al.com"> info@primaenergy-al.com </a>
+            
+          </ul>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <h6><i class="fa fa-phone"></i>Phone</h6>
+          <ul class="footer-links">
+            <li> Administrator :<a href="tel:00355692069800"> 00355692069800  </a></li>
+    
+            
+          </ul>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div class="container" >
+      <div class="row">
+        <div class="col-md-8 col-sm-6 col-xs-12">
+          <p class="copyright-text">Copyright &copy; All rights reserved to Prima Energy 
+      
+          </p>
+        </div>
+
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <ul class="social-icons">
+            <li><a class="facebook" href="https://www.facebook.com/PrimaEnergyAl/"><i class="fa fa-facebook"></i></a></li>
+            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+            <!-- <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li> -->
+            <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+          </ul>
+        </div>
+      </div>
+    </div>
+</footer>
+

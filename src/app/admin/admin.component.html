@@ -1,5 +1,53 @@
+<!-- NAVBAR -->
+<nav class="navbar fixed-top navbar-dark bg-dark navbar-expand-lg">
+  <a class="navbar-brand" (click)="logout()" style="cursor:pointer;" [routerLink]="">
+    <svg class="bi bi-gear" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M8.837 1.626c-.246-.835-1.428-.835-1.674 0l-.094.319A1.873 1.873 0 014.377 3.06l-.292-.16c-.764-.415-1.6.42-1.184 1.185l.159.292a1.873 1.873 0 01-1.115 2.692l-.319.094c-.835.246-.835 1.428 0 1.674l.319.094a1.873 1.873 0 011.115 2.693l-.16.291c-.415.764.42 1.6 1.185 1.184l.292-.159a1.873 1.873 0 012.692 1.116l.094.318c.246.835 1.428.835 1.674 0l.094-.319a1.873 1.873 0 012.693-1.115l.291.16c.764.415 1.6-.42 1.184-1.185l-.159-.291a1.873 1.873 0 011.116-2.693l.318-.094c.835-.246.835-1.428 0-1.674l-.319-.094a1.873 1.873 0 01-1.115-2.692l.16-.292c.415-.764-.42-1.6-1.185-1.184l-.291.159A1.873 1.873 0 018.93 1.945l-.094-.319zm-2.633-.283c.527-1.79 3.065-1.79 3.592 0l.094.319a.873.873 0 001.255.52l.292-.16c1.64-.892 3.434.901 2.54 2.541l-.159.292a.873.873 0 00.52 1.255l.319.094c1.79.527 1.79 3.065 0 3.592l-.319.094a.873.873 0 00-.52 1.255l.16.292c.893 1.64-.902 3.434-2.541 2.54l-.292-.159a.873.873 0 00-1.255.52l-.094.319c-.527 1.79-3.065 1.79-3.592 0l-.094-.319a.873.873 0 00-1.255-.52l-.292.16c-1.64.893-3.433-.902-2.54-2.541l.159-.292a.873.873 0 00-.52-1.255l-.319-.094c-1.79-.527-1.79-3.065 0-3.592l.319-.094a.873.873 0 00.52-1.255l-.16-.292c-.892-1.64.902-3.433 2.541-2.54l.292.159a.873.873 0 001.255-.52l.094-.319z" clip-rule="evenodd"/>
+      <path fill-rule="evenodd" d="M8 5.754a2.246 2.246 0 100 4.492 2.246 2.246 0 000-4.492zM4.754 8a3.246 3.246 0 116.492 0 3.246 3.246 0 01-6.492 0z" clip-rule="evenodd"/>
+    </svg>
+{{email}}    </a>
+  <div class="container-fluid px-0">
+      <div class="row w-100">
+          <div class="col-2">
+              <button class="navbar-toggler" type="button" data-toggle="collapse"
+                  data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false"
+                  aria-label="Toggle navigation" (click)="isShown = !isShown">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+          </div>
+          <div class="col-10">
+              <div class="collapse justify-content-end navbar-collapse" [ngClass]="{ 'show': isShown }"
+                  id="navbarTogglerDemo03">
+                  <ul class="navbar-nav mt-2 mt-lg-0">
+                      <li class="nav-item ">
+                          <a class="nav-link"  (click)="scrollTo('section1')" style="cursor:pointer;">Kryesore</a>
+                      </li>
+                      <li class="nav-item ">
+                          <a class="nav-link"  (click)="scrollTo('section2')" style="cursor:pointer;">Certifikime</a>
+                      </li>
+                      <li class="nav-item" > 
+                          <a class="nav-link" (click)="scrollTo('section5')" style="cursor:pointer;">Projekte</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" (click)="scrollTo('section3')" style="cursor:pointer;">Partneret</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" (click)="scrollTo('section4')" style="cursor:pointer;">Galeri</a>
+                      </li>
+                      <!-- <li class="nav-item">
+                          <a class="nav-link" (click)="scrollTo('section6')" style="cursor:pointer;">Kontakt</a>
+                      </li> -->
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+</nav>
+
+
 <!-- KUSH  JEMI -->
-<div class="container" style="margin-top: 5%;">
+<div  id="section1" style="margin-top: 5%"></div>
+<div class="container" >
   <div class="row">
     <div class="col-12">
       <div class="card text-white bg-secondary">
@@ -28,6 +76,8 @@
 </div>
 
 <!-- CERTIFIKIME -->
+<div  id="section2"></div>
+
 <div class="container" style="margin-top: 5%;">
   <div class="card-deck">
       <div class="card text-white bg-secondary">
@@ -98,6 +148,7 @@
   </div>
 </div>
 <!-- PARTNERET -->
+<div  id="section3"></div>
 <div class="container" style="margin-top: 5%;">
   <div class="row">
       <div class="col-12">
@@ -127,6 +178,7 @@
 </div>
 
 <!-- PROJEKTE -->
+<div  id="section5"></div>
 <div class="container" style="margin-top: 5%;">
   <button type="button" class="btn btn-secondary" (click)="openModalNew(true)">
   <svg class="bi bi-file-plus" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -139,7 +191,7 @@
   <div class="row">
     <div class="card-deck col-sm-4" *ngFor="let p of projects; let i=index">
       <div class="card text-white bg-secondary" style="margin-top: 5%;">
-        <img class="card-img-top" src={{p.src}} height="300px">
+        <img class="card-img-top img-thumbnail imgCarousel1 img-fluid" src={{p.src}} >
 
         <div class="progress" *ngIf="uploadProgress != 0 && uploadProgress != 100 && currentProjectId==p.key">
           <div class="progress-bar" role="progressbar" [ngStyle]="{ 'width': uploadProgress + '%' }" aria-valuenow="0"
@@ -194,4 +246,5 @@
     </div>
   </div>
 </div>
+<div  id="section4"></div>
 <app-galery-admim></app-galery-admim>

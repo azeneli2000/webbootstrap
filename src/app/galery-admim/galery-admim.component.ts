@@ -6,6 +6,7 @@ import { AngularFireStorage } from '@angular/fire/storage';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { finalize } from 'rxjs/operators';
 import { disableDebugTools } from '@angular/platform-browser';
+import { ConfirmModalComponent } from '../confirm-modal/confirm-modal.component';
 
 
 @Component({
@@ -52,7 +53,16 @@ export class GaleryAdmimComponent implements OnInit {
       });
      })
   }
-  openModalConfirm(key){}
+  openModalConfirm(key){
+    const modalRef = this.modalService.open(ConfirmModalComponent);
+    modalRef.componentInstance.key = key;
+
+    modalRef.result.then((result) => {
+      if (result) {
+        this.data.deleteGallery(result);
+      }
+    });
+  }
   onFileSelected(event){
     this.currentImageId = event.target.id;
     var n = Date.now();
@@ -68,7 +78,6 @@ export class GaleryAdmimComponent implements OnInit {
           this.downloadURL.subscribe((url) => {
             if (url) {
               this.fb = url;
-              console.log(url);
               this.data.updateGallery(event.target.id, url);
             }
           });
@@ -81,6 +90,10 @@ export class GaleryAdmimComponent implements OnInit {
           task.percentageChanges().subscribe((a) => (this.uploadProgress = a));
         }
       });
+  }
+
+  addNewImage(){
+    this.data.addGallery();
   }
 
 }

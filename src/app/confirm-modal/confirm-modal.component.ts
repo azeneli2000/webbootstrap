@@ -12,7 +12,6 @@ export class ConfirmModalComponent implements OnInit {
   constructor(public activeModal: NgbActiveModal,private data : GetDataService) { }
 
   ngOnInit(): void {
-    console.log(this.key)
   }
 
   deleteProject(){
@@ -20,7 +19,7 @@ export class ConfirmModalComponent implements OnInit {
     this.activeModal.close(this.key);
    }
    closeModal(){
-     this.activeModal.close(this.key);
+     this.activeModal.close();
    }
 
 }

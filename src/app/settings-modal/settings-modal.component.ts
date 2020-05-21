@@ -19,12 +19,10 @@ export class SettingsModalComponent implements OnInit {
   constructor(public activeModal: NgbActiveModal, private data : GetDataService) { }
 
   ngOnInit(): void {
-    console.log(this.modalData.key)
   }
   passBack() {
     this.passEntry.emit(this.modalData);
     
-    console.log(this.modalData.key)
     this.data.setSetting(this.modalData.key,this.modalData);
     
     this.activeModal.close(this.modalData);
