@@ -83,10 +83,10 @@
 <div class="container " style="margin-top: 5%;">
     <div class="row">
         <div class="col-12 " >
-            <div class="card text-white bg-secondary ">
+            <div class="card text-white " style="background-color: #1B2740;">
                 <!-- <img class="card-img-top" src="assets/companyprofile.png" class="img-fluid"> -->
-                <div class="card-body shadow-nohover">
-                    <h5 class="card-title">Kush jemi</h5>
+                <div class="card-body shadow-nohover">                    
+                    <h5 class="card-title"><img  src="/assets/about.ico" class="img-fluid">Kush jemi</h5>
                     <p class="card-text">{{about}}</p>
                 </div>
             </div>
@@ -97,27 +97,25 @@
 <div  id="section2"></div>
 <div class="container" style="margin-top: 5%;">
     <div class="card-deck">
-        <div class="card text-white bg-secondary">
-            <img class="card-img-top" src="assets/enterprise.png" alt="Card image cap">
+        <div class="card text-white" style="background-color: #6C757C;">
+            <img class="card-img-top img-fluid" src="assets/enterprise.png" alt="Card image cap">
             <div class="card-body shadow-nohover ">
                 <h5 class="card-title">Profili i kompanise</h5>
                 <p class="card-text">{{profili}}</p>
             </div>
         </div>
-        <div class="card text-white bg-secondary">
+        <div class="card text-white " style="background-color: #1B2740;">
             <img class="card-img-top" src="assets/certification.png">
             <div class="card-body shadow-nohover">
                 <h5 class="card-title">Certifikimet</h5>
                 <p class="card-text">{{certifikime}}</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
             </div>
         </div>
-        <div class="card text-white bg-secondary">
+        <div class="card text-white img-fluid " style="background-color: #588da8;">
             <img class="card-img-top" src="assets/productlicensing.png" alt="Card image cap">
             <div class="card-body shadow-nohover">
                 <h5 class="card-title">Licensat</h5>
                 <p class="card-text">{{licensat}}</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
             </div>
         </div>
     </div>
@@ -125,12 +123,16 @@
 <!-- partneret -->
 <div  id="section3"></div>
 <div class="container" style="margin-top: 5%;" >
+  
+
     <div class="row">
         <div class="col-12">
-            <div class="card text-white bg-secondary">
-                <!-- <img class="card-img-top" src="assets/companyprofile.png" class="img-fluid"> -->
-                <div class="card-body shadow-nohover">
-                    <h5 class="card-title">Partneret e huaj</h5>
+
+            <div class="card text-white ">
+                <div class="card-body shadow-nohover"  style="background-color: #9a1f40;">
+
+                    <h5 class="card-title"><img  src="/assets/partner.ico" class="img-fluid">Partneret e huaj </h5>
+
                     <p class="card-text">{{partneret}}</p>
                 </div>
             </div>
@@ -146,7 +148,7 @@
     <div class="row">
 
         <div class="card-deck col-sm-4" *ngFor="let p of projects; let i=index">
-            <div class="card text-white bg-secondary" style="margin-top: 5%;">
+            <div class="card text-white " style="margin-top: 5%;background-color: #1B2740;">
                 <img class="card-img-top img-thumbnail imgCarousel1 img-fluid" src= {{p.src}} alt="Card image cap">
                 <div class="card-body shadow-nohover">
                     <h5 class="card-title">{{p.titulli}}</h5>
